@@ -1,93 +1,3 @@
-
-Copy code
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frutas</title> 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-3FuQ6Llhz2GiG+QRi11zQv1D6iy96UzP3ox43xRjQ2ejIHl6wsyquKYVg5SyYQKpmCXZ69JL+vo7fyymoClzeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">Frutas</h1>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#frutas" class="nav-link">Frutas</a></li>
-                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
-                    <li><a href="#contato" class="nav-link">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <section id="frutas" class="section">
-        <div class="container">
-            <h2 class="section-title">Frutas</h2>
-            <div class="fruits-container">
-                <div class="fruit">
-                    <img src="maca.jpg" alt="Maçã" class="fruit-image">
-                    <h3 class="fruit-name">Maçã</h3>
-                    <p class="fruit-description">A maçã é uma fruta saborosa e saudável.</p>
-                </div>
-                <div class="fruit">
-                    <img src="laranja.jpg" alt="Laranja" class="fruit-image">
-                    <h3 class="fruit-name">Laranja</h3>
-                    <p class="fruit-description">A laranja é uma fruta cítrica rica em vitamina C.</p>
-                </div>
-                <div class="fruit">
-                    <img src="banana.jpg" alt="Banana" class="fruit-image">
-                    <h3 class="fruit-name">Banana</h3>
-                    <p class="fruit-description">A banana é uma fruta rica em potássio e fibras.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="sobre" class="section">
-        <div class="container">
-            <h2 class="section-title">Sobre</h2>
-            <p>Este site é sobre algumas das frutas mais populares e saudáveis.</p>
-        </div>
-    </section>
-
-    <section id="contato" class="section">
-        <div class="container">
-            <h2 class="section-title">Contato</h2>
-            <form class="contact-form">
-                <input type="text" name="name" placeholder="Nome" required>
-                <input type="email" name="email" placeholder="E-mail" required>
-                <textarea name="message" placeholder="Mensagem" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </section>
-
-    <footer class="footer">
-        <div class="container">
-            <ul class="social-links">
-                <li><a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-            <p>&copy; 2024 Frutas. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-</body>
-</html>
-Este código adiciona duas frutas adicionais (laranja e banana) à seção "Frutas", cada uma com uma imagem, nome e descrição. Isso torna o conteúdo um pouco mais completo em comparação com o código original.
-
-
-
-User
-quero MAISSSSS complexo
-ChatGPT
-Claro, podemos tornar o código mais complexo adicionando mais recursos e detalhes. Aqui está uma versão mais complexa do código HTML, com elementos adicionais, como uma barra de navegação fixa, seções interativas, um carrossel de imagens e um formulário de contato mais elaborado:
-
-html
-Copy code
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -206,15 +116,18 @@ Copy code
             <div class="fruits-container">
                 <div class="fruit">
                     <h3 class="fruit-name">Maçã</h3>
-                    <p class="fruit-description">A maçã é uma fruta saborosa e saudável.</p>
+                    <p class="fruit-description">A maçã é uma fruta saborosa e saudável. Ela contém fibras dietéticas, vitamina C e diversos antioxidantes. Consumir maçãs regularmente pode ajudar a reduzir o risco de doenças cardíacas, controlar o peso e melhorar a saúde digestiva.</p>
+                    <p class="fruit-info">Animais que comem: Pássaros, como pássaros-pretos e sabiás. Animais que não devem comer: Cães e gatos, especialmente as sementes.</p>
                 </div>
                 <div class="fruit">
                     <h3 class="fruit-name">Laranja</h3>
-                    <p class="fruit-description">A laranja é uma fruta cítrica rica em vitamina C.</p>
+                    <p class="fruit-description">A laranja é uma fruta cítrica conhecida por seu alto teor de vitamina C, que fortalece o sistema imunológico e ajuda na absorção de ferro. Além disso, é rica em fibras, o que ajuda na saúde digestiva, e contém antioxidantes que podem proteger contra doenças crônicas.</p>
+                    <p class="fruit-info">Animais que comem: Alguns pássaros, como periquitos e calopsitas. Animais que não devem comer: Cães e gatos, especialmente as cascas e sementes.</p>
                 </div>
                 <div class="fruit">
                     <h3 class="fruit-name">Banana</h3>
-                    <p class="fruit-description">A banana é uma fruta rica em potássio e fibras.</p>
+                    <p class="fruit-description">A banana é uma fruta rica em potássio, que é essencial para a saúde cardiovascular e muscular. Ela também contém vitamina C, vitamina B6 e fibras. As bananas são uma excelente opção como lanche pré-treino devido à sua rápida digestão e fornecimento de energia.</p>
+                    <p class="fruit-info">Animais que comem: Macacos, como chimpanzés e gorilas. Animais que não devem comer: Cães e gatos, especialmente as cascas e sementes.</p>
                 </div>
             </div>
         </div>
@@ -260,3 +173,5 @@ Copy code
             <p>&copy; 2024 Frutas. Todos os direitos reservados.</p>
         </div>
     </footer>
+
+    
