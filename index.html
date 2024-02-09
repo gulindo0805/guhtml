@@ -1,6 +1,162 @@
-<!DOCTYPE HTML>
-<html>
+
+User
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frutas</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
-<h1> gu sla oq </h1>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Frutas</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#frutas" class="nav-link">Frutas</a></li>
+                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
+                    <li><a href="#contato" class="nav-link">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="frutas" class="section">
+        <div class="container">
+            <h2 class="section-title">Frutas</h2>
+            <div class="fruits-container">
+                <div class="fruit">
+                    <img src="maca.jpg" alt="Maçã" class="fruit-image">
+                    <h3 class="fruit-name">Maçã</h3>
+                    <p class="fruit-description">A maçã é uma fruta saborosa e saudável.</p>
+                </div>
+                <!-- Adicione mais divs de frutas aqui -->
+            </div>
+        </div>
+    </section>
+
+    <section id="sobre" class="section">
+        <div class="container">
+            <h2 class="section-title">Sobre</h2>
+            <p>Este site é sobre algumas das frutas mais populares e saudáveis.</p>
+        </div>
+    </section>
+
+    <section id="contato" class="section">
+        <div class="container">
+            <h2 class="section-title">Contato</h2>
+            <p>Você pode nos contatar pelo e-mail: contato@frutas.com</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Frutas. Todos os direitos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
+CSS (styles.css):
+
+css
+Copy code
+/* Reset de estilos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.logo {
+    font-size: 36px;
+}
+
+.nav ul {
+    list-style: none;
+}
+
+.nav li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.section {
+    padding: 60px 0;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.fruits-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fruit {
+    width: calc(33.33% - 40px);
+    margin: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.fruit:hover {
+    transform: translateY(-5px);
+}
+
+.fruit-image {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+    border-radius: 50%;
+}
+
+.fruit-name {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.fruit-description {
+    color: #666;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+} 
