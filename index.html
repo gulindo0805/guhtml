@@ -12,29 +12,53 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
         }
         .fixed-nav {
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background-color: #333;
+            background-color: rgba(51, 51, 51, 0.9);
             padding: 10px 0;
             z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .fixed-nav .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .fixed-nav .nav {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;
+        }
+        .fixed-nav .nav li {
+            margin-right: 20px;
+        }
+        .fixed-nav .nav li:last-child {
+            margin-right: 0;
         }
         .fixed-nav .nav-link {
             color: #fff;
             text-decoration: none;
             padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
         }
         .fixed-nav .nav-link:hover {
-            background-color: #555;
+            background-color: rgba(255, 255, 255, 0.1);
         }
         .carousel {
             width: 80%;
             margin: 20px auto;
             overflow: hidden;
             position: relative;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .carousel-images {
             display: flex;
@@ -43,14 +67,65 @@
         .carousel-image {
             width: 100%;
             flex: 0 0 auto;
+            border-radius: 10px;
+        }
+        .fruits-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+        }
+        .fruit {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+        .fruit:hover {
+            transform: translateY(-5px);
+        }
+        .fruit-name {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .fruit-description {
+            color: #666;
+            line-height: 1.6;
+        }
+        .fruit-info {
+            color: #888;
+            font-style: italic;
+        }
+        .section {
+            padding: 60px 0;
+            background-color: #fff;
+            text-align: center;
+        }
+        .section-title {
+            font-size: 36px;
+            margin-bottom: 30px;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .contact-form {
+            max-width: 600px;
+            margin: 0 auto;
         }
         .form-group {
             margin-bottom: 20px;
+            text-align: left;
         }
         .form-group label {
             display: block;
             font-weight: bold;
             margin-bottom: 5px;
+            color: #333;
         }
         .form-group input,
         .form-group textarea {
@@ -74,6 +149,33 @@
         }
         .form-group button:hover {
             background-color: #555;
+        }
+        .footer {
+            background-color: #333;
+            color: #fff;
+            padding: 30px 0;
+            text-align: center;
+        }
+        .footer p {
+            margin: 0;
+        }
+        .social-links {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 20px;
+        }
+        .social-links li {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .social-link {
+            color: #fff;
+            font-size: 24px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .social-link:hover {
+            color: #aaa;
         }
     </style>
 </head>
@@ -173,169 +275,6 @@
             <p>&copy; 2024 Frutas. Todos os direitos reservados.</p>
         </div>
     </footer>
-    <!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Frutas</title> 
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-3FuQ6Llhz2GiG+QRi11zQv1D6iy96UzP3ox43xRjQ2ejIHl6wsyquKYVg5SyYQKpmCXZ69JL+vo7fyymoClzeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
-        /* Additional styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        .fixed-nav {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            background-color: #333;
-            padding: 10px 0;
-            z-index: 1000;
-        }
-        .fixed-nav .nav-link {
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-        }
-        .fixed-nav .nav-link:hover {
-            background-color: #555;
-        }
-        .carousel {
-            width: 80%;
-            margin: 20px auto;
-            overflow: hidden;
-            position: relative;
-        }
-        .carousel-images {
-            display: flex;
-            transition: transform 0.5s ease-in-out;
-        }
-        .carousel-image {
-            width: 100%;
-            flex: 0 0 auto;
-        }
-        .form-group {
-            margin-bottom: 20px;
-        }
-        .form-group label {
-            display: block;
-            font-weight: bold;
-            margin-bottom: 5px;
-        }
-        .form-group input,
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            font-size: 16px;
-        }
-        .form-group textarea {
-            height: 150px;
-        }
-        .form-group button {
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-        .form-group button:hover {
-            background-color: #555;
-        }
-    </style>
-</head>
-<body>
-    <header class="header">
-        <div class="container">
-            <h1 class="logo">Frutas</h1>
-            <nav class="nav">
-                <ul>
-                    <li><a href="#frutas" class="nav-link">Frutas</a></li>
-                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
-                    <li><a href="#contato" class="nav-link">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
 
-    <div class="fixed-nav">
-        <div class="container">
-            <nav class="nav">
-                <ul>
-                    <li><a href="#frutas" class="nav-link">Frutas</a></li>
-                    <li><a href="#sobre" class="nav-link">Sobre</a></li>
-                    <li><a href="#contato" class="nav-link">Contato</a></li>
-                </ul>
-            </nav>
-        </div>
-    </div>
-
-    <section id="frutas" class="section">
-        <div class="container">
-            <h2 class="section-title">Frutas</h2>
-            <div class="carousel">
-                <div class="carousel-images">
-                    <img src="maca.jpg" alt="Maçã" class="carousel-image">
-                    <img src="laranja.jpg" alt="Laranja" class="carousel-image">
-                    <img src="banana.jpg" alt="Banana" class="carousel-image">
-                </div>
-            </div>
-            <div class="fruits-container">
-                <div class="fruit">
-                    <h3 class="fruit-name">Maçã</h3>
-                    <p class="fruit-description">A maçã é uma fruta saborosa e saudável. Ela contém fibras dietéticas, vitamina C e diversos antioxidantes. Consumir maçãs regularmente pode ajudar a reduzir o risco de doenças cardíacas, controlar o peso e melhorar a saúde digestiva.</p>
-                    <p class="fruit-info">Animais que comem: Pássaros, como pássaros-pretos e sabiás. Animais que não devem comer: Cães e gatos, especialmente as sementes.</p>
-                </div>
-                <div class="fruit">
-                    <h3 class="fruit-name">Laranja</h3>
-                    <p class="fruit-description">A laranja é uma fruta cítrica conhecida por seu alto teor de vitamina C, que fortalece o sistema imunológico e ajuda na absorção de ferro. Além disso, é rica em fibras, o que ajuda na saúde digestiva, e contém antioxidantes que podem proteger contra doenças crônicas.</p>
-                    <p class="fruit-info">Animais que comem: Alguns pássaros, como periquitos e calopsitas. Animais que não devem comer: Cães e gatos, especialmente as cascas e sementes.</p>
-                </div>
-                <div class="fruit">
-                    <h3 class="fruit-name">Banana</h3>
-                    <p class="fruit-description">A banana é uma fruta rica em potássio, que é essencial para a saúde cardiovascular e muscular. Ela também contém vitamina C, vitamina B6 e fibras. As bananas são uma excelente opção como lanche pré-treino devido à sua rápida digestão e fornecimento de energia.</p>
-                    <p class="fruit-info">Animais que comem: Macacos, como chimpanzés e gorilas. Animais que não devem comer: Cães e gatos, especialmente as cascas e sementes.</p>
-                </div>
-                <!-- Repita o padrão acima para adicionar mais frutas -->
-            </div>
-        </div>
-    </section>
-
-    <section id="sobre" class="section">
-        <div class="container">
-            <h2 class="section-title">Sobre</h2>
-            <p>Este site é sobre algumas das frutas mais populares e saudáveis.</p>
-        </div>
-    </section>
-
-    <!-- Adicione mais seções conforme necessário -->
-
-    <footer class="footer">
-        <div class="container">
-            <ul class="social-links">
-                <li><a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
-                <li><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
-                <li><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
-            </ul>
-            <p>&copy; 2024 Frutas. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-    <script>
-        // JavaScript code can be added here for interactivity
-    </script>
-</body>
-</html>
-
-
-    
 </body>
 </html>
