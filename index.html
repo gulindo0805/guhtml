@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Frutas</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-3FuQ6Llhz2GiG+QRi11zQv1D6iy96UzP3ox43xRjQ2ejIHl6wsyquKYVg5SyYQKpmCXZ69JL+vo7fyymoClzeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
     <header class="header">
@@ -44,117 +45,25 @@
     <section id="contato" class="section">
         <div class="container">
             <h2 class="section-title">Contato</h2>
-            <p>Você pode nos contatar pelo e-mail: contato@frutas.com</p>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Nome" required>
+                <input type="email" name="email" placeholder="E-mail" required>
+                <textarea name="message" placeholder="Mensagem" required></textarea>
+                <button type="submit">Enviar</button>
+            </form>
         </div>
     </section>
 
     <footer class="footer">
         <div class="container">
+            <ul class="social-links">
+                <li><a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="#" class="social-link"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#" class="social-link"><i class="fab fa-instagram"></i></a></li>
+            </ul>
             <p>&copy; 2024 Frutas. Todos os direitos reservados.</p>
         </div>
     </footer>
 </body>
 </html>
-CSS (styles.css):
 
-css
-Copy code
-/* Reset de estilos */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-}
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-}
-
-.logo {
-    font-size: 36px;
-}
-
-.nav ul {
-    list-style: none;
-}
-
-.nav li {
-    display: inline-block;
-    margin-left: 20px;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-}
-
-.section {
-    padding: 60px 0;
-}
-
-.section-title {
-    text-align: center;
-    font-size: 36px;
-    margin-bottom: 40px;
-}
-
-.fruits-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.fruit {
-    width: calc(33.33% - 40px);
-    margin: 20px;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-}
-
-.fruit:hover {
-    transform: translateY(-5px);
-}
-
-.fruit-image {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 15px;
-    border-radius: 50%;
-}
-
-.fruit-name {
-    font-size: 24px;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.fruit-description {
-    color: #666;
-}
-
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
-} 
