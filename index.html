@@ -3,55 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Login</title>
+<title>Pesquisa de Produtos</title>
 <style>
-    body {
-        font-family: Arial, sans-serif;
-    }
-    .container {
-        max-width: 400px;
-        margin: 50px auto;
-        padding: 20px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        background-color: #f9f9f9;
-    }
-    .container h2 {
-        text-align: center;
-    }
-    <a href=
-    .container form input[type="text"],
-    .container form input[type="password"] {
-        width: 100%;
-        padding: 10px;
-        margin: 10px 0;
-        border: 1px solid #ccc;
-        border-radius: 3px;
-    }
-    .container form input[type="submit"] {
-        width: 100%;
-        padding: 10px;
-        border: none;
-        border-radius: 3px;
-        background-color: #007bff;
-        color: #fff;
-        cursor: pointer;
-    }
-    .container form input[type="submit"]:hover {
-        background-color: #0056b3;
-    }
+  /* Estilos simples para o formulário */
+  #search-form {
+    margin-top: 20px;
+  }
+  #search-input {
+    padding: 8px;
+    width: 200px;
+  }
+  #search-button {
+    padding: 8px 12px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
 </style>
 </head>
 <body>
 
-<div class="container">
-    <h2>Login</h2>
-    <form action="#" method="post">
-        <input type="text" name="username" placeholder="Username" required>
-        <input type="password" name="password" placeholder="Password" required>
-        <input type="submit" value="Login">
-    </form>
-</div>
+<h2>Pesquisa de Produtos</h2>
+
+<form id="search-form">
+  <input type="text" id="search-input" placeholder="Digite o produto...">
+  <button type="submit" id="search-button">Pesquisar</button>
+</form>
+
+<!-- Resultado da pesquisa será exibido aqui -->
+<div id="search-results"></div>
+
+<script>
+  // Adicionando um evento de envio ao formulário
+  document.getElementById("search-form").addEventListener("submit", function(event) {
+    // Prevenir o comportamento padrão de envio do formulário
+    event.preventDefault();
+    // Obter o valor digitado pelo usuário
+    var searchTerm = document.getElementById("search-input").value;
+    // Realizar a lógica de pesquisa (aqui você pode adicionar sua própria lógica para buscar produtos)
+    // Por enquanto, vamos apenas exibir uma mensagem simples
+    var searchResults = "Resultados da pesquisa para: " + searchTerm;
+    // Exibir o resultado da pesquisa
+    document.getElementById("search-results").textContent = searchResults;
+  });
+</script>
 
 </body>
 </html>
