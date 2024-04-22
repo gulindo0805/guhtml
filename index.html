@@ -1,53 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pesquisa de Produtos</title>
-<style>
-  /* Estilos simples para o formulário */
-  #search-form {
-    margin-top: 20px;
-  }
-  #search-input {
-    padding: 8px;
-    width: 200px;
-  }
-  #search-button {
-    padding: 8px 12px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Burger King</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            background-color: #f5f5f5;
+        }
+
+        .login-container {
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #d9534f;
+        }
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            color: #d9534f;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #d9534f;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #c9302c;
+        }
+
+        .error-message {
+            color: #ff0000;
+            margin-top: 10px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
+    <div class="login-container">
+        <h1>Login - Burger King</h1>
+        <form id="loginForm" onsubmit="return validateForm()">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
 
-<h2>Pesquisa de Produtos</h2>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
 
-<form id="search-form">
-  <input type="text" id="search-input" placeholder="Digite o produto...">
-  <button type="submit" id="search-button">Pesquisar</button>
-</form>
+            <button type="submit">Login</button>
+        </form>
 
-<!-- Resultado da pesquisa será exibido aqui -->
-<div id="search-results"></div>
+        <div class="error-message" id="errorMessage"></div>
+    </div>
 
-<script>
-  // Adicionando um evento de envio ao formulário
-  document.getElementById("search-form").addEventListener("submit", function(event) {
-    // Prevenir o comportamento padrão de envio do formulário
-    event.preventDefault();
-    // Obter o valor digitado pelo usuário
-    var searchTerm = document.getElementById("search-input").value;
-    // Realizar a lógica de pesquisa (aqui você pode adicionar sua própria lógica para buscar produtos)
-    // Por enquanto, vamos apenas exibir uma mensagem simples
-    var searchResults = "Resultados da pesquisa para: " + searchTerm;
-    // Exibir o resultado da pesquisa
-    document.getElementById("search-results").textContent = searchResults;
-  });
-</script>
+    <script>
+        function validateForm() {
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
 
+           
+            if (username === 'example' && password === 'password') {
+                
+                alert('Login successful!');
+                return true;
+            } else {
+                document.getElementById('errorMessage').innerHTML = 'Invalid username or password';
+                return false;
+            }
+        }
+    </script>
 </body>
 </html>
