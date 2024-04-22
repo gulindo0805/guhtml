@@ -12,10 +12,22 @@
             padding: 0;
         }
         header {
-            background-color: #333;
+            background-color: #d9534f; /* Vermelho */
             color: #fff;
             padding: 20px;
             text-align: center;
+        }
+        /* Estilo para links dentro do cabeçalho */
+        header a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px;
+            margin: 0 5px;
+            border-radius: 5px;
+        }
+        /* Estilo para links dentro do cabeçalho quando passar o mouse */
+        header a:hover {
+            background-color: #c9302c; /* Vermelho mais escuro */
         }
     </style>
 </head>
@@ -23,8 +35,13 @@
 
 <header>
     <h1>Meu Site</h1>
-    <p>Bem-vindo ao meu site!</p>
+    <nav>
+        <a href="#">Página Inicial</a>
+        <a href="#">Sobre</a>
+        <a href="#">Contato</a>
+    </nav>
 </header>
 
 </body>
 </html>
+
