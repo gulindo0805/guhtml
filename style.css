@@ -1,107 +1,115 @@
-{
-    font-family: Arial, sans-serif;
+body {
     margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #ADD8E6; /* Azul claro suave */
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-between;
     align-items: center;
-    height: 100vh;
-    background-color: #f0f0f0;
+}
+
+header {
+    width: 100%;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
 }
 
 .container {
     display: flex;
-    width: 800px;
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.left-panel {
-    background: #f0f8ff;
-    padding: 20px;
-    width: 40%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
+    flex-wrap: wrap; /* Permite que as janelas se ajustem em telas menores */
     justify-content: center;
+    align-items: center;
+    gap: 30px; /* Espaço entre as janelas */
+    padding: 40px 20px;
+    flex-grow: 1; /* Permite que o container ocupe o espaço disponível */
 }
 
-.logo {
-    color: #2a7fc2;
+.floating-window {
+    background-color: #F8F8F8; /* Branco ligeiramente acinzentado */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra para efeito flutuante */
+    padding: 30px;
+    text-align: center;
+    width: 280px; /* Largura fixa para as janelas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
+    cursor: pointer;
+}
+
+.floating-window:hover {
+    transform: translateY(-8px); /* Efeito de "subir" no hover */
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+}
+
+.floating-window h2 {
+    color: #333;
+    margin-bottom: 15px;
     font-size: 24px;
 }
 
-.doctor-image img {
-    width: 100%;
-    max-width: 150px;
+.floating-window p {
+    color: #666;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 25px;
 }
 
-.right-panel {
-    padding: 40px;
-    width: 60%;
-}
-
-h2 {
-    font-size: 18px;
-    color: #004a80;
-}
-
-.input-group {
-    margin-bottom: 15px;
-}
-
-label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 5px;
-}
-
-input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.password-container {
-    display: flex;
-    align-items: center;
-}
-
-.password-container input {
-    flex: 1;
-}
-
-.toggle-password {
-    cursor: pointer;
-    margin-left: -25px;
-}
-
-.btn {
-    width: 100%;
-    background: #2a7fc2;
+.floating-window button {
+    background-color: #007bff;
     color: white;
     border: none;
-    padding: 10px;
-    font-size: 16px;
+    padding: 12px 25px;
     border-radius: 5px;
+    font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.btn:hover {
-    background: #1f5f8c;
+.floating-window button:hover {
+    background-color: #0056b3;
 }
 
-.links {
-    font-size: 12px;
+footer {
+    width: 100%;
+    padding: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
     color: #555;
+    font-size: 14px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
 }
 
-.links a {
-    color: #2a7fc2;
-    text-decoration: none;
-    font-weight: bold;
+/* Responsividade básica */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+    .floating-window {
+        width: 90%; /* Ocupa mais largura em telas menores */
+    }
+    header, footer {
+        padding: 15px;
+        flex-direction: column;
+        text-align: center;
+    }
+    nav a {
+        margin: 5px 10px;
+    }
 }
