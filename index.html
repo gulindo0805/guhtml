@@ -1,41 +1,44 @@
-<!DOCTYPE html>
+   <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8"> 
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clini+ - Plataforma de Gestão Médica</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Investimentos</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="left-panel">
-            <h1 class="logo">Clini+</h1>
-            <div class="doctor-image">
-                <img src="doctor-illustration.png" alt="Ilustração de Médico">
-            </div>
+    <header>
+        <div class="logo">Sua Plataforma de Investimentos</div>
+        <nav>
+            <a href="#">Login</a>
+            <a href="#">Cadastre-se</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="floating-window" id="rendaFixa">
+            <h2>Renda Fixa</h2>
+            <p>Invista com segurança e previsibilidade. Baixo risco, retornos estáveis.</p>
+            <button>Saiba Mais</button>
         </div>
-        <div class="right-panel">
-            <h2>Bem-vindo ao Clini+ - Sua Plataforma de Gestão Médica</h2>
-            <form>
-                <div class="input-group">
-                    <label for="email">EMAIL OU CRM</label>
-                    <input type="text" id="email" name="email" placeholder="Digite seu email ou CRM">
-                </div>
-                <div class="input-group">
-                    <label for="senha">SENHA</label>
-                    <div class="password-container">
-                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
-                        <span class="toggle-password">👁️</span>
-                    </div>
-                </div>
-                <button type="submit" class="btn">ENTRAR</button>
-            </form>
-            <p class="links">
-                <a href="#">Esqueceu sua senha?</a> Não se preocupe! Clique aqui para redefinir.
-            </p>
-            <p class="links">
-                <strong>Ainda não tem uma conta?</strong> Cadastre-se agora e aproveite todas as vantagens da Clini+!
-            </p>
+
+        <div class="floating-window" id="acoesFundos">
+            <h2>Ações e Fundos</h2>
+            <p>Potencialize seus ganhos com o mercado de capitais. Diversifique sua carteira.</p>
+            <button>Saiba Mais</button>
         </div>
-    </div>
+
+        <div class="floating-window" id="fii">
+            <h2>Fundos Imobiliários</h2>
+            <p>Receba aluguéis sem burocracia. Invista em imóveis de forma acessível.</p>
+            <button>Saiba Mais</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Sua Plataforma de Investimentos. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
+</html>
