@@ -17,6 +17,7 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Garante que o header fique acima de outros elementos */
 }
 
 .logo {
@@ -30,31 +31,39 @@ nav a {
     text-decoration: none;
     color: #007bff;
     font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #0056b3;
 }
 
 .container {
     display: flex;
-    flex-wrap: wrap; /* Permite que as janelas se ajustem em telas menores */
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 30px; /* Espaço entre as janelas */
+    gap: 30px;
     padding: 40px 20px;
-    flex-grow: 1; /* Permite que o container ocupe o espaço disponível */
+    flex-grow: 1;
 }
 
 .floating-window {
     background-color: #F8F8F8; /* Branco ligeiramente acinzentado */
     border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Sombra para efeito flutuante */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
     padding: 30px;
     text-align: center;
-    width: 280px; /* Largura fixa para as janelas */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transição suave */
-    cursor: pointer;
+    width: 280px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    /* cursor: pointer; */ /* Removido para que o cursor seja padrão no geral e mude apenas nos botões */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espaçamento entre os elementos internos */
 }
 
 .floating-window:hover {
-    transform: translateY(-8px); /* Efeito de "subir" no hover */
+    transform: translateY(-8px);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
 }
 
@@ -69,21 +78,54 @@ nav a {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 25px;
+    flex-grow: 1; /* Permite que a descrição ocupe o espaço necessário */
+}
+
+.investment-amount {
+    width: calc(100% - 20px); /* Largura total menos padding */
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.buttons-group {
+    display: flex;
+    justify-content: space-between; /* Espaçamento entre os botões */
+    gap: 10px; /* Espaço entre os botões */
+    margin-top: 15px;
 }
 
 .floating-window button {
-    background-color: #007bff;
-    color: white;
+    flex: 1; /* Faz com que os botões ocupem o mesmo espaço */
     border: none;
-    padding: 12px 25px;
+    padding: 12px 15px;
     border-radius: 5px;
-    font-size: 16px;
+    font-size: 15px; /* Tamanho da fonte levemente menor para caber */
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
-.floating-window button:hover {
+.floating-window button.saiba-mais {
+    background-color: #007bff;
+    color: white;
+}
+
+.floating-window button.saiba-mais:hover {
     background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+.floating-window button.investir {
+    background-color: #28a745; /* Cor verde para o botão investir */
+    color: white;
+}
+
+.floating-window button.investir:hover {
+    background-color: #218838;
+    transform: translateY(-2px);
 }
 
 footer {
@@ -100,9 +142,11 @@ footer {
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
+        padding: 20px 10px;
     }
     .floating-window {
-        width: 90%; /* Ocupa mais largura em telas menores */
+        width: 90%;
+        padding: 25px;
     }
     header, footer {
         padding: 15px;
@@ -111,5 +155,12 @@ footer {
     }
     nav a {
         margin: 5px 10px;
+    }
+    .buttons-group {
+        flex-direction: column; /* Botões um abaixo do outro em telas menores */
+    }
+    .floating-window button {
+        width: 100%; /* Ocupa toda a largura disponível */
+        margin-bottom: 10px; /* Espaço entre os botões em coluna */
     }
 }
