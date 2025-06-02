@@ -17,7 +17,7 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 10; /* Garante que o header fique acima de outros elementos */
+    z-index: 10;
 }
 
 .logo {
@@ -56,10 +56,9 @@ nav a:hover {
     text-align: center;
     width: 280px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    /* cursor: pointer; */ /* Removido para que o cursor seja padrão no geral e mude apenas nos botões */
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Espaçamento entre os elementos internos */
+    justify-content: space-between;
 }
 
 .floating-window:hover {
@@ -78,11 +77,11 @@ nav a:hover {
     font-size: 16px;
     line-height: 1.5;
     margin-bottom: 25px;
-    flex-grow: 1; /* Permite que a descrição ocupe o espaço necessário */
+    flex-grow: 1;
 }
 
 .investment-amount {
-    width: calc(100% - 20px); /* Largura total menos padding */
+    width: calc(100% - 20px);
     padding: 10px;
     margin-bottom: 20px;
     border: 1px solid #ddd;
@@ -92,22 +91,24 @@ nav a:hover {
 }
 
 .buttons-group {
-    display: flex;
-    justify-content: space-between; /* Espaçamento entre os botões */
-    gap: 10px; /* Espaço entre os botões */
+    /* Não precisamos mais de 'justify-content: space-between;' ou 'gap: 10px;'
+       pois haverá apenas um botão. */
+    display: flex; /* Ainda mantemos flex para que o botão possa ocupar 100% */
     margin-top: 15px;
 }
 
 .floating-window button {
-    flex: 1; /* Faz com que os botões ocupem o mesmo espaço */
+    flex: 1; /* Faz com que o botão ocupe todo o espaço disponível */
     border: none;
     padding: 12px 15px;
     border-radius: 5px;
-    font-size: 15px; /* Tamanho da fonte levemente menor para caber */
+    font-size: 15px;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.1s ease;
 }
 
+/* REMOVIDO: Estilos para .saiba-mais */
+/*
 .floating-window button.saiba-mais {
     background-color: #007bff;
     color: white;
@@ -117,6 +118,7 @@ nav a:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
 }
+*/
 
 .floating-window button.investir {
     background-color: #28a745; /* Cor verde para o botão investir */
@@ -157,10 +159,10 @@ footer {
         margin: 5px 10px;
     }
     .buttons-group {
-        flex-direction: column; /* Botões um abaixo do outro em telas menores */
+        flex-direction: column; /* Botões um abaixo do outro em telas menores (embora só haja um agora) */
     }
     .floating-window button {
-        width: 100%; /* Ocupa toda a largura disponível */
-        margin-bottom: 10px; /* Espaço entre os botões em coluna */
+        width: 100%;
+        margin-bottom: 10px; /* Ainda útil se você adicionar outros elementos no grupo no futuro */
     }
 }
