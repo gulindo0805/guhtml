@@ -51,7 +51,6 @@ nav a:hover {
     box-sizing: border-box; /* Inclui padding na largura */
 }
 
-/* Renomeado de .floating-window para .investment-card */
 .investment-card {
     background-color: #FFFFFF; /* Fundo branco puro */
     border-radius: 12px; /* Borda mais arredondada */
@@ -98,7 +97,7 @@ nav a:hover {
 }
 
 /* Botão de Investir com borda arredondada */
-.invest-button { /* Renomeado de .investir para .invest-button */
+.invest-button {
     width: 100%; /* Ocupa a largura total */
     border: none;
     padding: 15px 20px; /* Mais padding */
