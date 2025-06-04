@@ -12,26 +12,27 @@ body {
 header {
     width: 100%;
     padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: rgba(255, 255, 255, 0.9); /* Um pouco mais opaco */
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra mais suave */
     z-index: 10;
 }
 
 .logo {
-    font-size: 24px;
+    font-size: 26px; /* Aumentado um pouco */
     font-weight: bold;
     color: #333;
 }
 
 nav a {
-    margin-left: 20px;
+    margin-left: 25px; /* Espaçamento ajustado */
     text-decoration: none;
     color: #007bff;
     font-weight: bold;
     transition: color 0.2s ease;
+    font-size: 17px; /* Aumentado um pouco */
 }
 
 nav a:hover {
@@ -42,127 +43,114 @@ nav a:hover {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: 30px;
-    padding: 40px 20px;
-    flex-grow: 1;
+    gap: 30px; /* Espaço entre os cartões */
+    padding: 50px 20px; /* Mais padding vertical */
+    flex-grow: 1; /* Ocupa o espaço restante verticalmente */
+    width: 100%; /* Garante que o container ocupe a largura total para centralizar */
+    max-width: 1200px; /* Limita a largura máxima para o conteúdo não esticar demais */
+    box-sizing: border-box; /* Inclui padding na largura */
 }
 
-.floating-window {
-    background-color: #F8F8F8; /* Branco ligeiramente acinzentado */
-    border-radius: 10px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    padding: 30px;
+/* Renomeado de .floating-window para .investment-card */
+.investment-card {
+    background-color: #FFFFFF; /* Fundo branco puro */
+    border-radius: 12px; /* Borda mais arredondada */
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.1); /* Sombra mais limpa */
+    padding: 35px; /* Mais padding */
     text-align: center;
-    width: 280px;
+    width: 300px; /* Largura um pouco maior */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-between; /* Espaça o conteúdo */
+    min-height: 280px; /* Altura mínima para uniformidade */
 }
 
-.floating-window:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+.investment-card:hover {
+    transform: translateY(-10px); /* Efeito de elevação maior */
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
-.floating-window h2 {
-    color: #333;
+.investment-card h2 {
+    color: #2c3e50; /* Cor mais escura para o título */
     margin-bottom: 15px;
-    font-size: 24px;
+    font-size: 26px; /* Título maior */
 }
 
-.floating-window p {
-    color: #666;
+.investment-card p {
+    color: #7f8c8d; /* Cinza mais suave para o texto */
     font-size: 16px;
-    line-height: 1.5;
+    line-height: 1.6;
     margin-bottom: 25px;
-    flex-grow: 1;
+    flex-grow: 1; /* Permite que o parágrafo ocupe o espaço restante */
 }
 
+/* Input com borda arredondada */
 .investment-amount {
     width: calc(100% - 20px);
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 16px;
+    padding: 12px; /* Mais padding */
+    margin-bottom: 25px; /* Mais espaço abaixo */
+    border: 1px solid #c8d6e5; /* Borda mais suave */
+    border-radius: 8px; /* Borda arredondada */
+    font-size: 17px;
     text-align: center;
+    box-sizing: border-box; /* Inclui padding na largura */
 }
 
-.buttons-group {
-    /* Não precisamos mais de 'justify-content: space-between;' ou 'gap: 10px;'
-       pois haverá apenas um botão. */
-    display: flex; /* Ainda mantemos flex para que o botão possa ocupar 100% */
-    margin-top: 15px;
-}
-
-.floating-window button {
-    flex: 1; /* Faz com que o botão ocupe todo o espaço disponível */
+/* Botão de Investir com borda arredondada */
+.invest-button { /* Renomeado de .investir para .invest-button */
+    width: 100%; /* Ocupa a largura total */
     border: none;
-    padding: 12px 15px;
-    border-radius: 5px;
-    font-size: 15px;
+    padding: 15px 20px; /* Mais padding */
+    border-radius: 8px; /* Borda arredondada */
+    font-size: 18px; /* Texto maior */
+    font-weight: bold;
     cursor: pointer;
+    background-color: #2ecc71; /* Verde primário */
+    color: white;
     transition: background-color 0.3s ease, transform 0.1s ease;
+    box-shadow: 0 4px 10px rgba(46, 204, 113, 0.3); /* Sombra para o botão */
 }
 
-/* REMOVIDO: Estilos para .saiba-mais */
-/*
-.floating-window button.saiba-mais {
-    background-color: #007bff;
-    color: white;
-}
-
-.floating-window button.saiba-mais:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-}
-*/
-
-.floating-window button.investir {
-    background-color: #28a745; /* Cor verde para o botão investir */
-    color: white;
-}
-
-.floating-window button.investir:hover {
-    background-color: #218838;
-    transform: translateY(-2px);
+.invest-button:hover {
+    background-color: #27ae60; /* Verde mais escuro no hover */
+    transform: translateY(-3px); /* Efeito de elevação no hover */
+    box-shadow: 0 6px 15px rgba(46, 204, 113, 0.4);
 }
 
 footer {
     width: 100%;
-    padding: 15px;
-    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px; /* Mais padding */
+    background-color: rgba(255, 255, 255, 0.9);
     text-align: center;
     color: #555;
-    font-size: 14px;
-    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.05);
+    font-size: 15px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.05);
+    margin-top: auto; /* Empurra o rodapé para baixo */
 }
 
-/* Responsividade básica */
+/* Responsividade */
 @media (max-width: 768px) {
-    .container {
+    header {
         flex-direction: column;
-        padding: 20px 10px;
-    }
-    .floating-window {
-        width: 90%;
-        padding: 25px;
-    }
-    header, footer {
         padding: 15px;
-        flex-direction: column;
-        text-align: center;
+    }
+    nav {
+        margin-top: 10px;
     }
     nav a {
-        margin: 5px 10px;
+        margin: 0 10px;
     }
-    .buttons-group {
-        flex-direction: column; /* Botões um abaixo do outro em telas menores (embora só haja um agora) */
+    .container {
+        flex-direction: column;
+        padding: 30px 15px;
     }
-    .floating-window button {
-        width: 100%;
-        margin-bottom: 10px; /* Ainda útil se você adicionar outros elementos no grupo no futuro */
+    .investment-card {
+        width: 100%; /* Ocupa a largura total em telas menores */
+        max-width: 350px; /* Limite máximo para evitar que fique muito largo em tablets */
+        padding: 30px;
+    }
+    .investment-amount, .invest-button {
+        font-size: 16px;
     }
 }
